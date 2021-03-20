@@ -2,12 +2,12 @@
   <section>
     <h2>{{ teamName }}</h2>
     <ul>
-      <user-item
+      <UserItem
         v-for="member in members"
         :key="member.id"
         :name="member.fullName"
         :role="member.role"
-      ></user-item>
+      />
     </ul>
   </section>
 </template>
@@ -24,10 +24,10 @@ export default {
       teamName: 'Test',
       members: [
         { id: 'u1', fullName: 'Max Schwarz', role: 'Engineer' },
-        { id: 'u2', fullName: 'Max Schwarz', role: 'Engineer' },
-      ],
+        { id: 'u2', fullName: 'Max Schwarz', role: 'Engineer' }
+      ]
     };
-  },
+  }
 };
 </script>
 
